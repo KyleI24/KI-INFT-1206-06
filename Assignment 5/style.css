@@ -7,7 +7,7 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: #dde;
+  background-color: rgb(191, 250, 174);
 }
 
 body {
@@ -18,29 +18,29 @@ body {
 
 /* || typography */
 
-font[size="7"], font[size="6"], font[size="5"] {
+h1, h2, h3 {
   font-family: 'Sonsie One', cursive;
-  color: #2a2a2a;
+  color: #000000;
 }
 
 p, input, li, table, label {
   font-family: 'Open Sans Condensed', sans-serif;
-  color: #2a2a2a;
+  color: #000000;
 }
 
-font[size="7"] {
+h1 {
   font-size: 4rem;
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 10px black;
+  text-shadow: 2px 2px 10px #081C15;
 }
 
-font[size="6"] {
+h2 {
   font-size: 3rem;
   text-align: center;
 }
 
-font[size="5"] {
+h3 {
   font-size: 2.2rem;
 }
 
@@ -139,7 +139,7 @@ footer {
 
 table {
   width: 100%;
-  background-color: #dde;
+  background-color: rgb(111, 190, 87);
   border-collapse: collapse;
 }
 
@@ -156,7 +156,7 @@ th[scope="col"] {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: #def;
+  background-color: rgb(136, 211, 113);
 }
 
 /* styling content images and audio */
