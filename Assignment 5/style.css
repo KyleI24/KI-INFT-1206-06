@@ -7,7 +7,7 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: rgb(191, 250, 174);
+  background-color: rgb(109, 165, 123);
 }
 
 body {
@@ -24,7 +24,7 @@ h1, h2, h3 {
 }
 
 p, input, li, table, label {
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: sans-serif;
   color: #000000;
 }
 
@@ -51,8 +51,8 @@ p, li, table {
 
 /* || header layout */
 
-div[class="nav"], article, footer, .secondary {
-  background-color: green;
+nav, article, footer, .secondary {
+  background-color: #B7E4C7;
 }
 
 article, footer, .secondary {
@@ -89,7 +89,7 @@ nav a {
   font-size: 2rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: #081C15;
+  color: #172017;
 }
 
 nav .search {
@@ -100,21 +100,26 @@ nav .search {
   padding: 0 2em;
 }
 
-.search input {
+.search input,
+.search button {
   font-size: 1.6rem;
-  height: 32px;
-}
+    height: 32px;
+  }
 
 .search input[type="search"] {
   flex: 3;
 }
 
-.search input[type="submit"] {
+.search button {
   flex: 1;
   margin-left: 1rem;
   background: #333;
   border: 0;
   color: white;
+}
+
+.search label {
+  width: 0;
 }
 
 /* || main layout */
@@ -139,8 +144,14 @@ footer {
 
 table {
   width: 100%;
-  background-color: rgb(111, 190, 87);
+  background-color: rgb(113, 177, 127);
+  color: #192019;
   border-collapse: collapse;
+  border: 1px solid #3d5340;
+}
+
+table caption {
+  color: #203525;
 }
 
 th, td {
@@ -156,7 +167,8 @@ th[scope="col"] {
 }
 
 tbody tr:nth-child(odd) {
-  background-color: rgb(136, 211, 113);
+  background-color: rgb(170, 219, 174);
+  color: #172416;
 }
 
 /* styling content images and audio */
@@ -170,22 +182,67 @@ audio {
   width: 500px;
 }
 
+button {
+  display: block;
+  float: left;
+  height: 100%;
+  cursor: pointer;
+  border: 0;
+}
+
+button:hover, button:focus {
+  background-color: #ddd;
+}
+
+button:active {
+  background-color: #ccc;
+}
+
+.transcript-container {
+  width: 480px;
+  margin: 10px auto;
+  border: 2px solid #081C15;
+  min-height: 38px;
+}
+
+.transcript {
+  background-color: #D8F3DC;
+  color: #081C15;
+  height: 0;
+  overflow: auto;
+  padding: 0 10px;
+}
+
+.transcript * {  
+  width: 100%;
+  color: #081C15;
+}
+
+.transcript-container button {
+  width: 100%;
+  height: 36px;
+  background-color: #142016;
+  color: white;
+}
+
+
 /* Comments styling */
 
 .comments {
-  background-color: #def;
+  background-color: #d8f3dc;
   padding: 10px;
+  border: 1px solid #152414;
 }
 
 .show-hide {
   cursor: pointer;
 }
 
-.comments font[size="6"] {
+.comments h2 {
   font-size: 2rem;
 }
 
-.comments font[size="6"]:nth-of-type(2) {
+.comments h2:nth-of-type(2) {
   margin-bottom: 0;
 }
 
@@ -204,7 +261,8 @@ audio {
   text-align: right;
 }
 
-.comment-form input {
+.comment-form input, 
+.comment-form button {
   margin-left: 1rem;
   flex: 6;
 }
@@ -214,21 +272,27 @@ audio {
   width: 150px;
 }
 
-.comment-form input, .comment-form label, .show-hide {
+.comment-form input, .comment-form label, 
+.comment-form button, .show-hide {
   font-size: 1.6rem;
   line-height: 32px;
 }
 
-.comment-form input[type="submit"], .show-hide {
-  background: #333;
+.comment-form button, .show-hide {
+  background: #1e2c1f;
   border: 0;
   color: white;
 }
 
-.comment-form input[type="submit"] {
-  width: 30%;
-  display: block;
+.comment-form div[id="submit"] {
   margin: 0 auto;
+}
+
+.comment-form button {
+  display: block;
+  margin: 0 3rem 1rem;
+  float: right;
+  padding: 0 2rem;
 }
 
 .comment-container {
@@ -247,4 +311,18 @@ audio {
 
 .comment-container li p:nth-child(2) {
   flex: 5;
+}
+
+.comment-container li p span {
+  font-size: 0;
+}
+
+/* Skip to main content */
+.skip-to-content-link {
+  font-size: 0;
+}
+
+.skip-to-content-link-visible {
+  font-size: 18px;
+  background-color: #b7dfba;
 }
